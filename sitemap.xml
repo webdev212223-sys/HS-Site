@@ -3,36 +3,36 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
-    <loc>https://hscomputerscctv.com/</loc>
+    <loc>https://hscomputercctv.netlify.app/</loc>
     <lastmod>2026-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://hscomputerscctv.com/logo.png</image:loc>
+      <image:loc>https://hscomputercctv.netlify.app/logo.png</image:loc>
       <image:title>H.S Computers &amp; CCTV Logo</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://hscomputerscctv.com/banner.jpg</image:loc>
+      <image:loc>https://hscomputercctv.netlify.app/banner.jpg</image:loc>
       <image:title>CCTV Installation Karachi</image:title>
     </image:image>
   </url>
 
   <url>
-    <loc>https://hscomputerscctv.com/services.html</loc>
+    <loc>https://hscomputercctv.netlify.app/services.html</loc>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://hscomputerscctv.com/about.html</loc>
+    <loc>https://hscomputercctv.netlify.app/about.html</loc>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://hscomputerscctv.com/contact.html</loc>
+    <loc>https://hscomputercctv.netlify.app/contact.html</loc>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

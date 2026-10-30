@@ -9,4 +9,4 @@ Disallow: /*?utm_
 Disallow: /*?ref=
 
 # Sitemap
-Sitemap: https://hscomputerscctv.com/sitemap.xml
+Sitemap: https://hscomputercctv.netlify.app/sitemap.xml
