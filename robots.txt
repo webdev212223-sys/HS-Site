@@ -1,0 +1,12 @@
+# robots.txt for H.S Computers & CCTV
+User-agent: *
+Allow: /
+
+# Admin panel ko index hone se roko
+Disallow: /Admin%20Panel/
+Disallow: /admin/
+Disallow: /*?utm_
+Disallow: /*?ref=
+
+# Sitemap
+Sitemap: https://hscomputerscctv.com/sitemap.xml

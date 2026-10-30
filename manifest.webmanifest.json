@@ -1,0 +1,13 @@
+{
+  "name": "H.S Computers & CCTV",
+  "short_name": "H.S CCTV",
+  "description": "Expert CCTV consultation, planning and installation in Karachi, Pakistan.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e2a3a",
+  "icons": [
+    { "src": "/logo.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/logo.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
