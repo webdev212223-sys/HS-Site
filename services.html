@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
+  
+  <!-- ═══ PRIMARY SEO (Targeting Keywords) ═══ -->
+  <meta name="description" content="Looking for CCTV camera installation in Karachi? We provide expert security camera setup, maintenance, and repair services for homes and offices. Call us today!" />
+  <title>CCTV Installation & Camera Services in Karachi | H.S Computers</title>
+  <link rel="canonical" href="https://hscomputercctv.netlify.app/services.html" />
+
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+  <style>
+    /* Same CSS as index.html */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --navy: #1e2a3a; --primary: #3a7fc4; --dark-btn: #2c4a6b; --light-bg: #e8f4fd; --text-dark: #1a1a1a; --text-muted: #555; --radius-card: 20px; --shadow-soft: 0 4px 24px rgba(30, 42, 58, .08); --font-heading: 'Outfit', sans-serif; --font-body: 'Inter', sans-serif; --header-h: 72px; }
+    body { font-family: var(--font-body); color: var(--text-dark); background: #fff; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .btn { display: inline-flex; padding: 12px 28px; border-radius: 999px; font-weight: 600; border: none; cursor: pointer; }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .section-pad { padding: 80px 0; }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; height: var(--header-h); }
+    .nav-links { display: flex; gap: 20px; list-style: none; }
+    .nav-links a { font-weight: 500; color: var(--text-muted); }
+    .nav-links a.active { color: var(--navy); font-weight: 700; }
+    .detail-row { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 40px; }
+    .detail-img { border-radius: var(--radius-card); overflow: hidden; box-shadow: var(--shadow-soft); }
+    .detail-img img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/3; }
+    .detail-text h3 { color: var(--navy); font-size: 1.5rem; margin-bottom: 12px; }
+    .detail-text p { color: var(--text-muted); margin-bottom: 20px; }
+    .services-hero { background: var(--navy); padding: 72px 0 80px; text-align: center; color: #fff; }
+    @media (max-width: 768px) { .detail-row { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+  <header class="site-header" style="background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+    <div class="container header-inner">
+      <a href="index.html" style="color:var(--navy); font-weight:700; font-size:1.2rem;">H.S Computers & CCTV</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="services-hero">
+    <div class="container">
+      <h1 style="font-size: 2.5rem; margin-bottom: 10px;">Professional CCTV Installation in Karachi</h1>
+      <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto;">H.S Computers & CCTV offers top-rated security camera installation and maintenance services across Karachi.</p>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+      <!-- Yeh container dynamic data load karega -->
+      <div id="servicesGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px;">
+        <p>Loading services...</p>
+      </div>
+      
+      <div id="detailRows"></div>
+    </div>
+  </section>
+
+  <footer style="background: var(--navy); color: #fff; padding: 40px 0; text-align: center;">
+    <div class="container">
+      <p>&copy; 2026 H.S Computers & CCTV. All rights reserved.</p>
+      <p style="color:#8fb8d9; margin-top:5px;">Plot D, 48, Metroville Block-4, Karachi</p>
+    </div>
+  </footer>
+
+  <script>
+    const SUPABASE_URL = "https://tlyiwzgjmczawhqfohct.supabase.co";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRseWl3emdqbWN6YXdocWZvaGN0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMxNzY5NDYsImV4cCI6MjEwODc1Mjk0Nn0.NL_qVRdPLH9f_xR1oKYvvMB-n2rypSEfjVFJvCVCXno";
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script>
+    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    async function loadServicesPage() {
+      try {
+        // Load services grid
+        const { data: services, error: sError } = await supabase.from('services').select('*').eq('is_active', true).order('sort_order', { ascending: true });
+        if (services && services.length > 0) {
+          document.getElementById('servicesGrid').innerHTML = services.map(svc => `
+            <div style="background:#fff; border-radius:20px; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,0.08);">
+              <img src="${svc.image_url || ''}" alt="${svc.title}" style="width:100%; height:200px; object-fit:cover;">
+              <div style="padding:24px;">
+                <h3 style="color:var(--navy); margin-bottom:10px;">${svc.title}</h3>
+                <p style="color:var(--text-muted); margin-bottom:20px;">${svc.description}</p>
+                <a href="tel:+923158901026" class="btn btn-primary">Call Now</a>
+              </div>
+            </div>
+          `).join('');
+        }
+
+        // Load detailed zig-zag rows
+        const { data: details, error: dError } = await supabase.from('service_details').select('*').eq('is_active', true).order('sort_order', { ascending: true });
+        if (details && details.length > 0) {
+          document.getElementById('detailRows').innerHTML = details.map((d, i) => `
+            <div class="detail-row">
+              <div class="detail-img" ${i % 2 === 1 ? 'style="order:2;"' : ''}>
+                <img src="${d.image_url || ''}" alt="${d.title}">
+              </div>
+              <div class="detail-text" ${i % 2 === 1 ? 'style="order:1;"' : ''}>
+                <h3>${d.title}</h3>
+                <p>${d.text}</p>
+                ${d.show_button ? '<a href="tel:+923158901026" class="btn btn-primary">Call Now</a>' : ''}
+              </div>
+            </div>
+          `).join('');
+        }
+      } catch (err) {
+        console.error('Error loading services:', err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadServicesPage);
+  </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
+  
+  <meta name="description" content="Learn about H.S Computers & CCTV, Karachi's trusted security system provider. We have years of experience in CCTV installation and maintenance." />
+  <title>About Us | H.S Computers & CCTV Karachi</title>
+  <link rel="canonical" href="https://hscomputercctv.netlify.app/about.html" />
+
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+  <style>
+    /* ── GLOBAL STYLES ── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --navy: #1e2a3a; --primary: #3a7fc4; --light-bg: #e8f4fd; --text-muted: #555; --radius-card: 20px; --shadow-soft: 0 4px 24px rgba(30, 42, 58, .08); --font-heading: 'Outfit', sans-serif; --font-body: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: #1a1a1a; background: #fff; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; line-height: 1.2; }
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section-pad { padding: 80px 0; }
+    
+    /* ── HEADER ── */
+    .site-header { position: sticky; top: 0; z-index: 1000; background: #fff; box-shadow: 0 2px 16px rgba(30, 42, 58, .08); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 16px; }
+    .logo-text { font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem; color: var(--navy); }
+    .nav-links { display: flex; align-items: center; gap: 6px; list-style: none; }
+    .nav-links a { display: block; padding: 8px 16px; font-weight: 500; font-size: .93rem; color: var(--text-muted); border-radius: 8px; position: relative; transition: color .2s; }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-links a.active { color: var(--navy); font-weight: 600; }
+    .nav-links a.active::after { content: ''; position: absolute; left: 16px; right: 16px; bottom: 0; height: 3px; border-radius: 3px; background: var(--primary); }
+
+    /* ── ABOUT PAGE SPECIFIC ── */
+    .about-intro { max-width: 820px; margin: 0 auto 48px; text-align: center; }
+    .about-intro h1 { color: var(--navy); font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 16px; }
+    .about-intro p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 16px; }
+    
+    .about-cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 72px; }
+    .about-card { background: #fff; border-radius: var(--radius-card); overflow: hidden; box-shadow: var(--shadow-soft); transition: transform .3s, box-shadow .3s; display: flex; flex-direction: column; }
+    .about-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(30, 42, 58, .14); }
+    .about-card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; }
+    .about-card-body { padding: 24px 28px 28px; display: flex; align-items: flex-start; gap: 16px; }
+    .about-card-text h3 { color: var(--navy); margin-bottom: 6px; }
+    .about-card-text p { color: var(--text-muted); font-size: .92rem; }
+    .about-arrow { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; background: var(--light-bg); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; transition: all .25s; }
+    .about-arrow:hover { background: var(--primary); color: #fff; transform: translateX(3px); }
+
+    /* ══════════════════════════════════════════
+       NEW GALLERY (MASONRY LAYOUT - Auto Height)
+       ══════════════════════════════════════════ */
+    .gallery-section { display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start; }
+    .gallery-heading h2 { color: var(--navy); margin-bottom: 12px; font-size: 2rem; }
+    .gallery-heading p { color: var(--text-muted); font-size: .95rem; }
+    
+    /* Using CSS Columns for Masonry Effect */
+    .gallery-mosaic { 
+      column-count: 2; 
+      column-gap: 16px; 
+      width: 100%;
+    }
+    
+    .gallery-mosaic .g-item { 
+      break-inside: avoid; /* Prevents an image from splitting between columns */
+      margin-bottom: 16px; /* Vertical space between images */
+      border-radius: 18px; 
+      overflow: hidden; 
+      background: #f0f0f0; 
+      width: 100%;
+    }
+    
+    .gallery-mosaic .g-item img { 
+      width: 100%; 
+      height: auto; /* IMPORTANT: This lets the image keep its original aspect ratio */
+      display: block;
+      transition: transform .4s; 
+      object-fit: contain; 
+    }
+    
+    .gallery-mosaic .g-item:hover img { 
+      transform: scale(1.03); 
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 992px) {
+      .gallery-section { grid-template-columns: 1fr; gap: 24px; }
+    }
+    @media (max-width: 768px) {
+      .about-cards-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .section-pad { padding: 56px 0; }
+      .about-intro h1 { font-size: 2rem; }
+      
+      /* 1 Column on Mobile */
+      .gallery-mosaic { 
+        column-count: 1; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-wrap">
+        <span class="logo-text">H.S Computers & CCTV</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ABOUT CONTENT -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="about-intro">
+        <h1>About H.S Computers & CCTV</h1>
+        <p>At <strong>H.S Computers & CCTV</strong>, we provide expert CCTV consultation and smart security planning tailored to homes and businesses across Karachi.</p>
+        <p>We secure your peace of mind with reliable, up-to-date CCTV solutions, expert guidance, and fast local support in Karachi.</p>
+      </div>
+
+      <!-- Image Cards -->
+      <div class="about-cards-grid">
+        <div class="about-card">
+          <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80" alt="Industrial Security">
+          <div class="about-card-body">
+            <div class="about-card-text">
+              <h3>Industrial Security</h3>
+              <p>Robust systems for factories and warehouses.</p>
+            </div>
+            <a href="services.html" class="about-arrow">&rarr;</a>
+          </div>
+        </div>
+        <div class="about-card">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Consulting">
+          <div class="about-card-body">
+            <div class="about-card-text">
+              <h3>Expert Consulting</h3>
+              <p>Expert advice on security planning and setup.</p>
+            </div>
+            <a href="services.html" class="about-arrow">&rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery -->
+      <div class="gallery-section">
+        <div class="gallery-heading">
+          <h2>Gallery</h2>
+          <p>Snapshots of our expert CCTV installations around Karachi.</p>
+        </div>
+        
+        <!-- Dynamic Images Container -->
+        <div class="gallery-mosaic" id="galleryMosaic">
+          <!-- Fallback Images -->
+          <div class="g-item"><img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&q=80" alt="CCTV installation"></div>
+          <div class="g-item"><img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80" alt="Security system"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: var(--navy); color: #fff; padding: 40px 0; text-align: center;">
+    <div class="container">
+      <p>&copy; 2026 H.S Computers & CCTV. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ SUPABASE SCRIPT ═══════════════ -->
+  <script>
+    const SUPABASE_URL = "https://tlyiwzgjmczawhqfohct.supabase.co";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRseWl3emdqbWN6YXdocWZvaGN0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMxNzY5NDYsImV4cCI6MjEwODc1Mjk0Nn0.NL_qVRdPLH9f_xR1oKYvvMB-n2rypSEfjVFJvCVCXno";
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script>
+    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    async function loadGallery() {
+      try {
+        const { data: images, error } = await supabase
+          .from('gallery')
+          .select('*')
+          .eq('is_active', true)
+          .order('sort_order', { ascending: true });
+
+        if (error) throw error;
+
+        if (images && images.length > 0) {
+          const container = document.getElementById('galleryMosaic');
+          
+          // Generate HTML for images
+          container.innerHTML = images.map((img) => {
+            return `
+              <div class="g-item">
+                <img src="${img.image_url}" alt="${img.caption || 'CCTV Installation'}" loading="lazy">
+              </div>
+            `;
+          }).join('');
+        }
+      } catch (err) {
+        console.error("Error loading gallery from database:", err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadGallery);
+  </script>
+</body>
+</html>
